@@ -18,7 +18,7 @@ _Maybe other experiments could be added ..._
 1. Print the number of phone numbers found.
 1. Verify your result by `tail gen_100k.txt` and looking at the answer.
    When the file was generated, the answer was saved within itself.
-1. Time it with `time`.
+1. Time it with `time`.  _(see results section for how)_
 1. Add it to `results.txt` in this repo.
 
 I want these languages tested:
@@ -32,6 +32,14 @@ Later, I'd like these just for fun:
 * PHP - yes, php cli app, woooo
 * Scala
 * Python
+
+## Results
+Pipe time stderr to results.txt.
+
+    { time ruby telephones.rb gen_100k.txt; } 2>> results.txt
+
+Or substitute your script/program there.  You should probably do at least three runs.  We can do averages later.
+
 
 ## The Challenge
 

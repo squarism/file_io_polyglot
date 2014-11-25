@@ -1,1 +1,3 @@
-100
+ruby telephones.rb gen_100k.txt  4.21s user 0.45s system 99% cpu 4.670 total
+ruby telephones.rb gen_100k.txt  4.10s user 0.44s system 99% cpu 4.550 total
+ruby telephones.rb gen_100k.txt  4.12s user 0.45s system 99% cpu 4.576 total
