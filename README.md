@@ -37,4 +37,4 @@ IO speed is fixed (maybe).  The real challenge is in program design to get throu
 
 Also this data file is only 145k so maybe that's not enough.
 
-The answer should be 11 phone numbers btw.
+The answer should be 10 phone numbers btw.
