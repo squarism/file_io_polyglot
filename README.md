@@ -35,6 +35,6 @@ Later, I'd like these just for fun:
 
 IO speed is fixed (maybe).  The real challenge is in program design to get through the file fast enough while asyncing/whatever out to a processing layer.  At least this is what I imagine.  I'm not sure if there's anything like concurrent or parallel IO.
 
-Also this data file is only 145k so maybe that's not enough.
+Also this data file is only 1.4MB so hopefully that's enough.
 
 The answer should be 10 phone numbers btw.
