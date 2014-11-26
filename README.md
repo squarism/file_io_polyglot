@@ -1,8 +1,14 @@
-# File IO Experiments
+# Go Through a File as Fast as You Can
 
-Sometimes Perl beats Ruby with I/O speed.  Surprising but not offensive.
+Some languages surprise our team with IO performance.  For example, we
+love Ruby but Perl most of the time (if not all) beats Ruby on IO
+reading speed.  Surprising but not offensive.  Of course, grep wins all
+battles because it doesn't store anything and it's brilliantly written.
+
 Outside the bottom-feeding battles of dynamic languages, what would
-something assumed to be "fast" behave like?
+something assumed to be "fast" behave like?  What if we wanted to do
+concurrent reads?  Is there even an advantage?  What would be a good
+design?  What would be a fruitless design?
 
 Also, this may serve as a nice interview quiz.
 
