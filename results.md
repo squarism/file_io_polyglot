@@ -10,4 +10,8 @@ perl telephones.pl gen_100k.txt  0.41s user 0.05s system 99% cpu 0.465 total
 perl telephones.pl gen_100k.txt  0.41s user 0.05s system 99% cpu 0.463 total
 perl telephones.pl gen_100k.txt  0.41s user 0.06s system 99% cpu 0.465 total
 
-
+### Go
+_2.8ghz Mac Pro Tower, go version go1.3.3 darwin/amd64_
+./telephones gen_100k.txt  0.46s user 0.19s system 144% cpu 0.453 total
+./telephones gen_100k.txt  0.47s user 0.20s system 146% cpu 0.455 total
+./telephones gen_100k.txt  0.46s user 0.21s system 147% cpu 0.453 total
