@@ -42,7 +42,8 @@ Later, I'd like these just for fun:
 ## Results
 Pipe time stderr to results.txt.
 
-    { time ruby telephones.rb gen_100k.txt; } 2>> results.txt
+    echo -e '### My Results!\n' >> results.md
+    { time ruby telephones.rb gen_100k.txt; } 2>> results.md
 
 Or substitute your script/program there.  You should probably do at least three runs.  We can do averages later.
 
