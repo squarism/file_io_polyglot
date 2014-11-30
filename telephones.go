@@ -5,6 +5,7 @@ import (
   "fmt"
   "os"
   "regexp"
+  "runtime"
   "sync"
 )
 
@@ -22,8 +23,8 @@ func telephoneNumbersInFile(path string) int {
   var telephone = regexp.MustCompile(`\(\d+\)\s\d+-\d+`)
 
   // do I need buffered channels here?
-  jobs := make(chan string, 10)
-  results := make(chan int, 10)
+  jobs := make(chan string)
+  results := make(chan int)
 
   // I think we need a wait group, not sure.
   wg := new(sync.WaitGroup)
@@ -70,6 +71,7 @@ func matchTelephoneNumbers(jobs <-chan string, results chan<- int, wg *sync.Wait
 }
 
 func main() {
+  runtime.GOMAXPROCS(runtime.NumCPU())
   // An artificial input source.  Normally this is a file passed on the command line.
   numberOfTelephoneNumbers := telephoneNumbersInFile(os.Args[1])
   fmt.Println(numberOfTelephoneNumbers)
