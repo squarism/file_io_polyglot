@@ -34,25 +34,26 @@ func telephoneNumbersInFile(path string) int {
     go matchTelephoneNumbers(jobs, results, wg, telephone)
   }
 
-  // go over a file line by line and queue up a ton of work
-  scanner := bufio.NewScanner(file)
-  for scanner.Scan() {
-    // Later I want to create a buffer of lines, not just line-by-line here ...
-    jobs <- scanner.Text()
+  // Go over a file line by line and queue up a ton of work
+  go func() {
+    scanner := bufio.NewScanner(file)
+    for scanner.Scan() {
+      // Later I want to create a buffer of lines, not just line-by-line here ...
+      jobs <- scanner.Text()
+    }
+    close(jobs)
+  }()
 
-  }
-
-  close(jobs)
-  wg.Wait()
-  close(results)
+  go func() {
+    wg.Wait()
+    close(results)
+  }()
 
   // Add up the results from the results channel.
-  // The rest of this isn't even working so ignore for now.
   counts := 0
   for v := range results {
     counts += v
   }
-
   return counts
 }
 
