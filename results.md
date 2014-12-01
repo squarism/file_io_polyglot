@@ -25,3 +25,17 @@ _2.8ghz Mac Pro Tower, go version go1.3.3 darwin/amd64_
     ./telephones gen_100k.txt  2.69s user 1.40s system 244% cpu 1.673 total
     ./telephones gen_100k.txt  2.63s user 1.35s system 245% cpu 1.616 total
     ./telephones gen_100k.txt  2.66s user 1.43s system 243% cpu 1.684 total
+### My Results!
+ruby nonidiomatic.rb gen_100k.txt
+
+real	0m0.944s
+user	0m0.888s
+sys	0m0.052s
+
+real	0m0.914s
+user	0m0.880s
+sys	0m0.032s
+
+real	0m0.929s
+user	0m0.912s
+sys	0m0.016s
